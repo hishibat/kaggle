@@ -1,0 +1,97 @@
+:root {
+  --bg0: #05070d;
+  --bg1: #0b1020;
+  --accent: #58e1ff;
+  --danger: #ff698f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color: #e9f1ff;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, #182546 0%, transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, #1c0f37 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.hud h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  letter-spacing: 0.12em;
+  color: #f4fcff;
+  text-shadow: 0 0 10px #3ccfff99;
+}
+
+.stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.stats strong {
+  color: var(--accent);
+}
+
+.stage {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #4f80ff44;
+  box-shadow:
+    0 0 0 1px #7e9eff22,
+    0 20px 40px #01030a88,
+    inset 0 0 60px #122854;
+}
+
+#game {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: linear-gradient(180deg, #050913, #03050a 65%, #090707 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 4px;
+  background: linear-gradient(180deg, #02050aaa, #05070dcf);
+  backdrop-filter: blur(1px);
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.overlay p {
+  margin: 0;
+  color: #b3d0ff;
+}
+
+.overlay.hidden {
+  display: none;
+}
