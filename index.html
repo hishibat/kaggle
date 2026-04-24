@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo Arkanoid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hud">
+        <h1>NEO ARKANOID</h1>
+        <div class="stats">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Lives: <strong id="lives">3</strong></span>
+          <span>Level: <strong id="level">1</strong></span>
+        </div>
+      </header>
+
+      <section class="stage">
+        <canvas id="game" width="960" height="600" aria-label="ブロック崩し"></canvas>
+        <div id="overlay" class="overlay">
+          <h2 id="overlay-title">クリックで開始</h2>
+          <p id="overlay-text">A/D または ←/→ で移動。Pで一時停止</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
